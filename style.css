@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Jacquarda+Bastarda+9&family=Lexend+Exa:wght@100..900&family=Pinyon+Script&display=swap");
+header .header{
+  background-color: #fff;
+  height: 45px;
+}
+header a img{
+  width: 134px;
+margin-top: 4px;
+}
+.login-page {
+  position: absolute;
+  top: 50%; /* Position it at 50% from the top */
+  left: 50%; /* Position it at 50% from the left */
+  transform: translate(-50%, -50%); /* Center it horizontally and vertically */
+  width: 360px;
+  padding: 8% 0 0;
+  margin: 0 auto; /* Remove margin */
+}
+.login-page .form .login{
+  margin-top: -31px;
+margin-bottom: 26px;
+height: 50px;
+}
+.form {
+  background: #FFFFFF;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color:#ba8e8e;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+body {
+  background-color:#f5f0ec;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#topnav {
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: #ba8e8e;
+
+  font-family:"Allura", cursive;
+  font-size: 20px;
+}
+
+.nav-link {
+  display: inline-block;
+  width: 100px;
+  height: 55px;
+
+  color: White;
+
+  text-align: center;
+  line-height: 55px;
+
+  text-decoration: none;
+}
+
+#logo {
+  width: 120px;
+
+  background-color: #6b4c6b;;
+
+  font-weight: bold;
+}
+
+#about {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&display=swap");
+
+:root {
+  --theme-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.9s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f0ec;
+}
+
+.body-background {
+  background-image: url("back.jpg");
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+  margin-top: 150px;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.header {
+  font-family: "Allura", cursive;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: #ba8e8e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.hcontent {
+  font-family: Gotham SSm;
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Medium_Web.woff2)
+    format("woff2");
+}
+
+.header .logo {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.header .logo span {
+  color: #fff;
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-left: 2rem;
+}
+
+.header .navbar a:hover {
+  color: var(--theme-color);
+}
+
+#menu-bars {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}

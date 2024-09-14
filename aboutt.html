@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--<link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <title>Event Organisers | Soiree</title>
+
+    <!-- css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+    <!--css file-->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&display=swap");
+
+:root {
+  --theme-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.9s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+  margin-top: 200px;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.header {
+  font-family: "Allura", cursive;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: #ba8e8e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.hcontent {
+  font-family: Gotham SSm;
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Medium_Web.woff2)
+    format("woff2");
+}
+
+.header .logo {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.header .logo span {
+  color: #fff;
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-left: 2rem;
+}
+
+.header .navbar a:hover {
+  color: var(--theme-color);
+}
+
+#menu-bars {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+      footer {
+      text-align: center;
+      padding: 3px;
+      background-color: #ba8e8e;
+      color: white;
+    }
+    .footerContainer{
+        width: 100%;
+        padding: 70px 30px 20px;
+    }
+    .socialIcons{
+        display: flex;
+        justify-content: center;
+    }
+    .socialIcons a{
+        text-decoration: none;
+        padding: 10px;
+        background-color:#FFFFFF;
+        margin: 10px;
+        border-radius: 50%;
+    }
+    
+    .socialIcons a i{
+        font-size: 2em;
+        color: #ba8e8e;
+        opacity: 0.9;    
+    }
+    
+    .socialIcons a:hover{
+        background-color: #111;
+        transition: 0.5s;
+    }
+    
+    .socialIcons a:hover i{
+        color: #FFFFFF;
+        transition: 0.5s;
+    }
+    
+    .footerBottom{
+        background-color: #d7bdbd;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .footerBottom p{
+        color: #FFFFFF;
+    }
+    
+    .designer{
+       opacity: 0.7;
+       text-transform: uppercase; 
+       letter-spacing: 1px;
+       font-weight: 400;
+       margin: 0px 5px; 
+    }
+    .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            background-color:rgba(220, 195, 195, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            font-size: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .team-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="background-image: url('images/m.jpg');">
+  
+  <header class="header">
+    <a href="#" class="logo"><span>S</span>oiree</a>
+
+    <nav class="navbar">
+      <a href="index.php">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="booking.php">Book Party</a>
+      <a href="payment.html">payment</a>
+      <a href="contact.php">Contact</a>
+      <a href="help.html">Help</a>
+      <a href="logg.php">Login</a>
+      <a href="logout.php">Logout</a>
+    </nav>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+  </header>
+  <div class="container">
+      <center><h2>Welcome to  Soiree Party Organizers</h2></center><br><br>
+      <p>At Party Organizers, we believe that every celebration deserves to be special and unforgettable. With years of experience in event planning, we are committed to turning your vision into reality.</p>
+      
+      <p>From intimate gatherings to extravagant affairs, we handle every detail with precision and creativity. Our dedicated team works closely with clients to understand their needs and preferences, ensuring that each event reflects their unique style and personality.</p>
+      
+      <div class="team-section">
+          <h2>Meet Our Team</h2>
+          <div class="team-member">
+              <img src="about.jpg" alt="Team Member 1">
+              <p>John Doe<br>Event Coordinator</p>
+          </div>
+          <!-- Add more team members if needed -->
+      </div>
+  </div>
+</body>
+<footer>
+  <div class="footerContainer">
+      <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>    
+          <a href=""><i class="fa-brands fa-instagram"></i></a> 
+          <a href=""><i class="fa-brands fa-twitter"></i></a> 
+          <a href=""><i class="fa-brands fa-youtube"></i></a> 
+      </div> 
+      
+  </div>
+  <div class="footerBottom">
+      <p>Copyright &copy;2022</p>           
+    </div>
+ </footer>
+</body>
+</html>

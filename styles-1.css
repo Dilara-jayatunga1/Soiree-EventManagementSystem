@@ -1,0 +1,648 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&display=swap");
+
+:root {
+  --theme-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.9s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f0ec;
+}
+
+.body-background {
+  background-image: url("gallery/images/wed.webp");
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+  margin-top: 150px;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.header {
+  font-family: "Allura", cursive;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: #ba8e8e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.hcontent {
+  font-family: Gotham SSm;
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Medium_Web.woff2)
+    format("woff2");
+}
+
+.header .logo {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.header .logo span {
+  color: #fff;
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-left: 2rem;
+}
+
+.header .navbar a:hover {
+  color: var(--theme-color);
+}
+
+#menu-bars {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.home .content {
+  text-align: center;
+  padding-top: 6rem;
+  margin: 2rem auto;
+  max-width: 70rem;
+}
+
+.home .content h3 {
+  color: #000000;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.home .content h3 span {
+  font-family: "Allura", cursive;
+  color: #ba8e8e;
+  font-size: 5rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  background: #666;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #c04a0a;
+}
+
+.home .home-slider .swiper-slide {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 50rem;
+  width: 35rem;
+}
+
+.home .home-slider .swiper-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.heading span {
+  color: var(--theme-color);
+  text-transform: uppercase;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #444;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--theme-color);
+  border-radius: 5rem;
+}
+
+.theme-toggler {
+  position: fixed;
+  top: 10rem;
+  right: -20rem;
+  background: #333;
+  z-index: 1000;
+  width: 20rem;
+  text-align: center;
+}
+
+.theme-toggler.active {
+  right: 0;
+}
+
+.theme-toggler h3 {
+  color: #fff;
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+/* media queries  */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bars {
+    display: initial;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-top: 0.1rem solid #222;
+    background: #333;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header .navbar a {
+    display: flex;
+    background: #222;
+    border-radius: 0.5rem;
+    padding: 1.3rem;
+    margin: 1.3rem;
+    font-size: 2rem;
+  }
+
+  .home .content h3 {
+    font-size: 4rem;
+  }
+}
+
+.pricing {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+}
+.bgoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/wed.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.package {
+  background: #755252;
+  color: #fff;
+  padding: 2rem;
+  margin: 0 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  flex: 1;
+  z-index: 2;
+}
+
+.package-name {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.price span {
+  font-size: 1.5rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+  padding-left: 20px;
+}
+
+.btn {
+  background: #ba8e8e;
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    flex-direction: column;
+  }
+
+  .package {
+    margin: 2rem 0;
+    padding-left: 2rem;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.about {
+  padding: 4rem 0;
+  margin-top: 50px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #cac0c0;
+}
+
+.about p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #cac0c0;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.booknow-form {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.booknow-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.booking-form {
+  font-size: 17px;
+  background-color: #ccc;
+  border-radius: 16px;
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  opacity: 0.9;
+  z-index: 2;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ba8e8e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c04a0a;
+}
+
+/*gallery*/
+.gallery .box-container .box {
+  position: relative;
+  border: 1rem solid #1c1c79;
+  border-radius: 5rem;
+  height: 25rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box:hover img {
+  transform: scale(1.1);
+  filter: grayscale();
+}
+
+.gallery .box-container .box .title {
+  position: absolute;
+  top: -10rem;
+  left: 0;
+  right: 0;
+  background: #1c1c79;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.gallery .box-container .box:hover .title {
+  top: 0;
+}
+
+.gallery .box-container .box .icons {
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+  right: 0;
+  background: #1c1c79;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.gallery .box-container .box:hover .icons {
+  bottom: 0;
+}
+
+.gallery .box-container .box .icons a {
+  font-size: 2rem;
+  margin: 5rem 1rem;
+  color: #fff;
+}
+.gallery .box-container .box .icons a:hover {
+  color: var(--theme-color);
+}
+
+/*footer*/
+.footer {
+  font-family: "Allura", cursive;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ba8e8e;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Align items vertically */
+  align-items: center; /* Align items horizontally */
+}
+
+/* Style for social media icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Adjust the margin to separate the company name and icons */
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: color 0.3s; /* Add transition for smooth color change */
+}
+
+.social-icons a:hover {
+  color: #c64242; /* Change color on hover */
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+*/
+.body-background {
+  background-image: url('back.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.faq-answer {
+  display: none;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.faq-answer.show {
+  display: block;
+}
+
+/* Styling for hover effect on question */
+.faq-question:hover {
+  color: #755252;
+}
+
+/* Styling for expand/collapse icon */
+.faq-question::after {
+  content: '\25BC'; /* Downward-pointing triangle */
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.faq-item.open .faq-question::after {
+  transform: rotate(180deg);
+}
+
+/* Styling for container border */
+.faq-container {
+  border: 2px solid #755252;
+}
+
+/* Styling for FAQ title */
+.faq-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Styling for answer background */
+.faq-answer {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Styling for answer box shadow */
+.faq-answer.show {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+

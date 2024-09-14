@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&display=swap");
+
+:root {
+  --theme-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.9s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(images/a.JPG);
+}
+
+.body-background {
+  background-image: url("images/wed.webp");
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+  margin-top: 150px;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.header {
+  font-family: "Allura", cursive;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: #ba8e8e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.hcontent {
+  font-family: Gotham SSm;
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Medium_Web.woff2)
+    format("woff2");
+}
+
+.header .logo {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.header .logo span {
+  color: #fff;
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-left: 2rem;
+}
+
+.header .navbar a:hover {
+  color: var(--theme-color);
+}
+
+#menu-bars {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.home .content {
+  text-align: center;
+  padding-top: 6rem;
+  margin: 2rem auto;
+  max-width: 70rem;
+}
+
+.home .content h3 {
+  color: #000000;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.home .content h3 span {
+  font-family: "Allura", cursive;
+  color: #ba8e8e;
+  font-size: 5rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  background: #666;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #c04a0a;
+}
+
+.home .home-slider .swiper-slide {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 50rem;
+  width: 35rem;
+}
+
+.home .home-slider .swiper-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.heading span {
+  color: var(--theme-color);
+  text-transform: uppercase;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #444;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--theme-color);
+  border-radius: 5rem;
+}
+
+.theme-toggler {
+  position: fixed;
+  top: 10rem;
+  right: -20rem;
+  background: #333;
+  z-index: 1000;
+  width: 20rem;
+  text-align: center;
+}
+
+.theme-toggler.active {
+  right: 0;
+}
+
+.theme-toggler h3 {
+  color: #fff;
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+/* media queries  */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bars {
+    display: initial;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-top: 0.1rem solid #222;
+    background: #333;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header .navbar a {
+    display: flex;
+    background: #222;
+    border-radius: 0.5rem;
+    padding: 1.3rem;
+    margin: 1.3rem;
+    font-size: 2rem;
+  }
+
+  .home .content h3 {
+    font-size: 4rem;
+  }
+}
+
+.pricing {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+}
+.bgoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/wed.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.package {
+  background: #755252;
+  color: #fff;
+  padding: 2rem;
+  margin: 0 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  flex: 1;
+  z-index: 2;
+}
+
+.package-name {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.price span {
+  font-size: 1.5rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+  padding-left: 20px;
+}
+
+.btn {
+  background: #ba8e8e;
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    flex-direction: column;
+  }
+
+  .package {
+    margin: 2rem 0;
+    padding-left: 2rem;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.booknow-form {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.booknow-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  /* z-index: 2; */
+}
+
+.booking-form {
+  font-size: 17px;
+  background-color: #ccc;
+  border-radius: 16px;
+  width: 400px;
+  /* height:100vh; */
+  padding: 20px;
+  opacity: 0.9;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left:36%;
+ /*z-index: 2;*/
+
+  /* position: fixed; */
+  /* top: 60%; */
+  /* left: 50%; */
+ /* transform: translate(-50%, -50%); */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ba8e8e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c04a0a;
+}
+
+/*gallery*/
+
+.gallery {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap to the next line if space is insufficient */
+  justify-content: center; /* Center the items horizontally */
+  gap: 20px; /* Add space between items */
+}
+
+.gallery .box-container {
+  max-width: 1200px;
+  width: 100%; /* Ensure the container takes full width */
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap to the next line if space is insufficient */
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery .box {
+  flex: 1 1 300px; /* Set initial size of items to allow flexibility */
+  position: relative;
+  border: 1rem solid #a86f6f;
+  border-radius: 5rem;
+  height: 25rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery .box:hover img {
+  transform: scale(1.1);
+  filter: grayscale();
+}
+
+.gallery .box .title {
+  position: absolute;
+  top: -10rem;
+  left: 0;
+  right: 0;
+  background: #a86f6f;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.gallery .box:hover .title {
+  top: 0;
+}
+
+.gallery .box .icons {
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+  right: 0;
+  background: #a86f6f;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.gallery .box:hover .icons {
+  bottom: 0;
+}
+
+.gallery .box .icons a {
+  font-size: 2rem;
+  margin: 5rem 1rem;
+  color: #fff;
+}
+
+.gallery .box .icons a:hover {
+  color: var(--theme-color);
+}
+
